@@ -53,6 +53,34 @@ csf = {
 print(csf.get('cw1-weight') * csf.get('cw1-mark') + csf.get('exam-weight') * csf.get('exam-mark'))
 
 
+csf = {
+    'cw1-weight': 0.4,
+    'cw1-mark': 79,
+    'exam-weight': 0.6,
+    'exam-mark': 65
+}
+print("Your nark for CSF:", csf.get('cw1-weight') * csf.get('cw1-mark') + csf.get('exam-weight') * csf.get('exam-mark'))
+
+def calculate_mark(csf):
+    return ("Your nark for CSF:", csf.get('cw1-weight') * csf.get('cw1-mark') + csf.get('exam-weight') * csf.get('exam-mark'))
+
+
+def get_input():
+    cw_weight = float(input("enter cw1 weight: "))
+    cw_mark = int(input("enter mark mark: "))
+    exam_weight = float(input("enter exam weight: "))
+    exam_mark = int(input("enter exam mark: "))
+    csf = {
+        'cw1-weight': cw_weight,
+        'cw1-mark': cw_mark,
+        'exam-weight': exam_weight,
+        'exam-mark': exam_mark
+    }
+    return csf
+
+
+print(calculate_mark(get_input()))
+
 def print_hist(h):
     for c in h:
         print(c, h[c])
